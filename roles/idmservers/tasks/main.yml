@@ -1,0 +1,7 @@
+- name: use redhat.yml for Rhel Systems
+  import_tasks: redhat.yml
+  when: ansible_facts['os_family']|lower == 'redhat'
+
+- name: use centos.yml for Centos Systems
+  import_tasks: centos.yml
+  when: ansible_facts['os_family']|lower == "centos"

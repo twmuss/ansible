@@ -1,0 +1,4 @@
+# roles/idmserver/tasks/redhat.yml
+- yum:
+    name: "aide"
+    state: present
