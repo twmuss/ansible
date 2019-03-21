@@ -1,0 +1,10 @@
+---
+- name: aide
+  hosts: Linuxserver
+  tasks:
+    - name: install the latest version of AIDE
+      become: yes
+      become_method: sudo 
+      yum:
+        name: aide
+        state: latest
