@@ -1,0 +1,5 @@
+[all]
+lap-ubuntu
+
+[all:vars]
+invent var1="Thomas Durst"

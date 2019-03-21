@@ -1,0 +1,20 @@
+---
+- hosts: all
+  vars:
+    var1: "Suchtext"
+  tasks:
+  - name: debug
+    debug: msg='{{ var1 }}'
+  - name: find string
+    tags: example1
+    lineinfile:
+      path: /tmp/versuch.txt
+      line: '{{ var1 }}'
+      state: present
+    check_mode: yes
+    register: presence
+    failed_when: presence is changed
+
+  - name: String gefunden
+    debug: msg="Suchtext gefunden"
+    when: presence is not changed
