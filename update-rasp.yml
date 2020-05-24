@@ -1,6 +1,6 @@
 ---
 # Version 0.1
-- hosts: rasp
+#- hosts: rasp
   remote_user: pi
   become: yes
   become_method: sudo
